@@ -120,6 +120,6 @@
   }
   .done_img {
     height: 20px;
-    widht: 20px;
+    width: 20px;
   }
 </style>
