@@ -1,5 +1,5 @@
-#App
-[link to the app](https://svelte-todo-sigma.vercel.app/)
+# App
+[See the app](https://svelte-todo-sigma.vercel.app/)
 
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
