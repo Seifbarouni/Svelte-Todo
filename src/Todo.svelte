@@ -1,4 +1,5 @@
 <script>
+  import TodoItem from "./TodoItem.svelte";
   export let todoList;
   let DoneTasks = [];
   let showDoneTasks = false;
@@ -40,22 +41,14 @@
 {/if}
 <div class="todos">
   {#each todoList as todoItem}
-    <div class="todo-item">
-      <span>{todoItem.text}</span>
-      <div class="buttons">
-        <button class="deleteButton" on:click={deleteItem(todoItem.id)}
-          >Delete</button
-        >
-        <button class="Done" on:click={DoneTask(todoItem.id)}>Done</button>
-      </div>
-    </div>
+    <TodoItem {todoItem} {deleteItem} {DoneTask} />
   {/each}
 </div>
 {#if showDoneTasks === true}
   <div class="finished">
     {#if DoneTasks.length === 0}
       <hr />
-      <p>Go Do your tasks!</p>
+      <p>Go do your tasks! Now.</p>
     {:else}
       <hr />
       {#if todoList.length === 0}
@@ -76,7 +69,7 @@
 <style>
   .todo-item {
     width: 500px;
-    border: 1px solid #aaa;
+    border: 1px solid black;
     border-radius: 2px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1em;
@@ -89,9 +82,7 @@
   }
   hr {
     width: 500px;
-  }
-  .todo-item span {
-    align-self: center;
+    background-color: black;
   }
   .todos {
     display: flex;
@@ -102,10 +93,7 @@
     background-color: #ff3e00;
     color: white;
   }
-  .Done {
-    background-color: #69ea7c;
-    color: white;
-  }
+
   .AddButton {
     background-color: #369ef9;
     color: white;

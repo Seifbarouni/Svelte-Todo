@@ -21,7 +21,7 @@
   }
 
   h2 {
-    color: #ff3e00;
+    color: black;
     text-transform: uppercase;
     font-size: 3em;
     font-weight: 100;
