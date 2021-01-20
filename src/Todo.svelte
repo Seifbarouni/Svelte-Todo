@@ -64,7 +64,10 @@
         <p>Done:</p>
       {/if}
       {#each DoneTasks as task}
-        <div class="todo-item">{task.text}</div>
+        <div class="todo-item">
+          {task.text}
+          <img class="done_img" src="img/Done_icon.png" alt="done_icon" />
+        </div>
       {/each}
     {/if}
   </div>
@@ -114,5 +117,9 @@
   .SeeButton {
     background-color: #d3d34c;
     color: white;
+  }
+  .done_img {
+    height: 20px;
+    widht: 20px;
   }
 </style>
